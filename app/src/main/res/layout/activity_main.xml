@@ -1,42 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/space_24"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <EditText
-        android:id="@+id/id_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/id_field_hint"
-        />
-    <EditText
-        android:id="@+id/name_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/name_hint"/>
+<!-- TODO 03.01: In order to support data binding we must use a layout element as root of the layout -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- TODO 03.02: We must use data tags in order to define properties that we are going to use in the layout-->
+    <data>
+        <variable name="viewmodel" type="com.ualr.patterns_example.viewmodel.UserViewModel" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/save_btn"
-            android:text="@string/save_btn_label"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/retrieve_btn"
-            android:text="@string/retrieve_btn_label"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/space_24">
+
+        <!-- TODO 03.05. We have to create bindings for the different values we want to manage from viewmodel. -->
+        <!-- TODO 03.06. We have to define these values as observable in order to get their updated value anytime -->
+        <EditText
+            android:id="@+id/id_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewmodel.userId}"
+            android:hint="@string/id_field_hint" />
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewmodel.userName}"
+            android:hint="@string/name_hint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- TODO 03.04. We can invoke some methods right from the layout file. Awesome! -->
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->viewmodel.onSaveBtnClicked(viewmodel.userId.toString(), viewmodel.userName.toString())}"
+                android:text="@string/save_btn_label" />
+
+            <Button
+                android:id="@+id/retrieve_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->viewmodel.onRetrieveBtnClicked(viewmodel.userId.toString())}"
+                android:text="@string/retrieve_btn_label" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/output_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:text="@{viewmodel.output}"
+            android:textSize="@dimen/info_text_size" />
     </LinearLayout>
-    <TextView
-        android:id="@+id/output_text_view"
-        android:layout_marginTop="@dimen/space_24"
-        android:layout_width="match_parent"
-        android:textSize="@dimen/info_text_size"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+</layout>

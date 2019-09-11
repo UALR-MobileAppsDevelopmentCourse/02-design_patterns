@@ -11,6 +11,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    // TODO.02.01:
+    dataBinding {
+        enabled true
+    }
     buildTypes {
         release {
             minifyEnabled false
