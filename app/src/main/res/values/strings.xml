@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">patterns_example</string>
     <string name="id_field_hint">Id</string>
-    <string name="first_name_hint">First name</string>
+    <string name="name_hint">Name</string>
     <string name="retrieve_btn_label">Retrieve</string>
     <string name="save_btn_label">Save</string>
 </resources>

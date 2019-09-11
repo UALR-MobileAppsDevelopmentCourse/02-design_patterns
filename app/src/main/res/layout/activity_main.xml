@@ -8,6 +8,8 @@
 <!-- TODO 05: The power of refactoring. Imagine we have to change the name of a variable but it's used -->
 <!-- in several places in the code -->
 <!-- TODO 06: global searching -->
+<!-- TODO 07: New package creation -->
+<!-- TODO 08: New classes creation -->
 
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,30 +18,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <EditText
+        android:id="@+id/id_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/id_field_hint"
         />
     <EditText
+        android:id="@+id/name_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/first_name_hint"/>
+        android:hint="@string/name_hint"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/save_btn"
             android:text="@string/save_btn_label"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
         <Button
+            android:id="@+id/retrieve_btn"
             android:text="@string/retrieve_btn_label"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <TextView
+        android:id="@+id/output_text_view"
         android:layout_marginTop="@dimen/space_24"
         android:layout_width="match_parent"
         android:textSize="@dimen/info_text_size"
