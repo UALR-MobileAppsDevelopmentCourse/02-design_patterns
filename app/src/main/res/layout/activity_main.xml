@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TODO 01: Define the layout of the main activity -->
-<!-- We'll define a very simple form -->
-
-<!-- TODO 02: Don't harcode padding value. Just use a dimen resources -->
-<!-- TODO 03: Don't hardcode string values. Just use string resources -->
-<!-- TODO 04: The power of alt + enter. Imagine we try to use a string is not availabe yet... -->
-<!-- TODO 05: The power of refactoring. Imagine we have to change the name of a variable but it's used -->
-<!-- in several places in the code -->
-<!-- TODO 06: global searching -->
-<!-- TODO 07: New package creation -->
-<!-- TODO 08: New classes creation -->
-
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"

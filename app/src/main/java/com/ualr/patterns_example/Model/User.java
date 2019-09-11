@@ -5,10 +5,6 @@ package com.ualr.patterns_example.Model;
  */
 public class User {
 
-    // TODO 09: Defining attributes
-    // TODO 10: Automatically create constructor, getter and setter methods with Generate...
-    // TODO 11: Rearrange code
-
     private String id;
     private String name;
 
