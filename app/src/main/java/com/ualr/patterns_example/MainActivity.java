@@ -3,14 +3,12 @@ package com.ualr.patterns_example;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.ualr.patterns_example.Model.User;
-import com.ualr.patterns_example.Model.UserDatabase;
+import com.ualr.patterns_example.model.UserDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO 13: We can test is everything is ok with our model
+        // TODO 13: We can test everything is ok with our model
         usersDB = new UserDatabase();
         // usersDB.addUser("IRC", "Ivan Rodriguez Code");
         // usersDB.addUser("JA", "John Appleseed");
