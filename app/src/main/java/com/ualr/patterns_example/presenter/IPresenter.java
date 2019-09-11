@@ -1,4 +1,4 @@
-package com.ualr.patterns_example.Presenter;
+package com.ualr.patterns_example.presenter;
 
 /**
  * Created by irconde on 2019-09-10.

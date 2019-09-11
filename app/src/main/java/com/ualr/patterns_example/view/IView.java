@@ -1,4 +1,4 @@
-package com.ualr.patterns_example.View;
+package com.ualr.patterns_example.view;
 
 /**
  * Created by irconde on 2019-09-10.

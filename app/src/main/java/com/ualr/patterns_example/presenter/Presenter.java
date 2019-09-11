@@ -1,7 +1,7 @@
-package com.ualr.patterns_example.Presenter;
+package com.ualr.patterns_example.presenter;
 
-import com.ualr.patterns_example.Model.UserDatabase;
-import com.ualr.patterns_example.View.IView;
+import com.ualr.patterns_example.model.UserDatabase;
+import com.ualr.patterns_example.view.IView;
 
 /**
  * Created by irconde on 2019-09-10.

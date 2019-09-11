@@ -1,4 +1,4 @@
-package com.ualr.patterns_example.Model;
+package com.ualr.patterns_example.model;
 
 /**
  * Created by irconde on 2019-09-10.

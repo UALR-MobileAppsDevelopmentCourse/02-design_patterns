@@ -1,4 +1,4 @@
-package com.ualr.patterns_example.View;
+package com.ualr.patterns_example.view;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,9 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ualr.patterns_example.Model.UserDatabase;
-import com.ualr.patterns_example.Presenter.IPresenter;
-import com.ualr.patterns_example.Presenter.Presenter;
+import com.ualr.patterns_example.presenter.IPresenter;
+import com.ualr.patterns_example.presenter.Presenter;
 import com.ualr.patterns_example.R;
 
 // TODO 0: Who is who in the MVP pattern
