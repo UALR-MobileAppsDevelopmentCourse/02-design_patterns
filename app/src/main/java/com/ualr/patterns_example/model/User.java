@@ -3,11 +3,10 @@ package com.ualr.patterns_example.model;
 /**
  * Created by irconde on 2019-09-10.
  */
-public class User {
 
-    // TODO 09: Defining attributes
-    // TODO 10: Automatically create constructor, getter and setter methods with Generate...
-    // TODO 11: Rearrange code
+// TODO 02: Create inside the new package a class that represents a very simple User: just and id and a name
+
+public class User {
 
     private String id;
     private String name;

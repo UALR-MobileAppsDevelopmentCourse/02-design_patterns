@@ -6,7 +6,8 @@ import java.util.HashMap;
  * Created by irconde on 2019-09-10.
  */
 
-// TODO 12: We define a Hashmap in order to retrieve users by id
+// TODO 03: Create inside the new package a class that represents the data source of the app, from which we get information about user
+
 public class UserDatabase {
 
     private HashMap<String, User> users;
