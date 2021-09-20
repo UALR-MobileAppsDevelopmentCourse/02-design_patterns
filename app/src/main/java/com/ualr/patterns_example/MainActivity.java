@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         // Log.d(TAG, String.format("The user with the id %s is %s", user.getId(), user.getName()));
         // TODO 07: Obviously we can check that everything is ok debugging
 
-
-
         // TODO 07: We have to define the code that is invoked when the user taps on each button
         this.mBinding.saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
